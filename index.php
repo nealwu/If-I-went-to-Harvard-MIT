@@ -7,25 +7,7 @@
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#postform').submit(function() {
-                makerequest();
-                return false;
-            });
-
-            function makerequest() {
-                $.ajax({
-                        'url' : 'get_or_make_post.php',
-                        'data' : {'newpost' : $('#newpost').html()},
-                        'success' : function(data) {
-                            // todo: parse data and add into our table                                                                                                                                              
-
-                        }
-                });
-            }
-        });
-    </script>
+    <script type="text/javascript" src="client.js"></script>
   </head>
 
   <body>

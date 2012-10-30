@@ -4,6 +4,9 @@ require_once('mysql.php');
 $body = mysqli_real_escape_string($_REQUEST['newpost']);
 $time = time();
 
+print "body is " . $body;
+print "<br />";
+
 if (!empty($body)) {
     $query = "INSERT INTO posts VALUES ('', $time, '$body')";
     print $query . "\n\n";
