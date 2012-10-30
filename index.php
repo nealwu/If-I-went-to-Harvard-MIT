@@ -8,21 +8,23 @@
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
 
     <script type="text/javascript">
-      $(document).ready(function() {
-          $('#postform').submit(function() {
-              makerequest();
-              return false;
-      });
+        $(document).ready(function() {
+            $('#postform').submit(function() {
+                makerequest();
+                return false;
+            });
 
-      function makerequest() {
-          $.ajax({'url' : 'get_or_make_post.php',
-                  'data' : {'newpost' : $('#newpost').html()},
-                  'success' : function(data) {
-                  // todo: parse data and add into our table
-                                 
-                  }
-          });
-      }
+            function makerequest() {
+                $.ajax({
+                        'url' : 'get_or_make_post.php',
+                        'data' : {'newpost' : $('#newpost').html()},
+                        'success' : function(data) {
+                            // todo: parse data and add into our table                                                                                                                                              
+
+                        }
+                });
+            }
+        });
     </script>
   </head>
 
