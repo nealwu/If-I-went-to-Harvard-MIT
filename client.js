@@ -24,6 +24,10 @@ function dateToString(month, day) {
     return month + " " + day;
 }
 
+function nl2br(str) {
+    return str.replace(/\n/g, '<br>');
+}
+
 function displayPosts() {
     if (localStorage.getItem("posts") !== null){
         var jsonData = localStorage.getItem("posts");
@@ -32,7 +36,7 @@ function displayPosts() {
         
         for (var i = 0; i < data.length; i++) {
             var time = new Date(data[i].time * 1000);
-            table += "<tr><td>" + data[i].body +
+            table += "<tr><td>" + nl2br(data[i].body) +
                 "</td><td><a href='#'>" + data[i].uid +
                 "</a></td><td>" + dateToString(time.getMonth(), time.getDate()) + ", " + timeToString(time.getHours(), time.getMinutes()) +
                 "</td></tr>";
@@ -50,6 +54,7 @@ function submitPostAndGetPosts() {
             'success': function(jsonData) {
                  // todo: parse data and add into our table
                 localStorage.setItem("posts", jsonData);
+                $('#newpost').val('');
                 displayPosts();
             },
     });
