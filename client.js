@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $('#postForm').submit(function() {
+    $('#postform').submit(function() {
         makerequest();
         return false;
     });

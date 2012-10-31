@@ -4,5 +4,5 @@ define('DB_PASS', 'neal&jacob');
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'ifiwentto');
 
-mysql_connect(DB_HOST, DB_USER, DB_PASS);
-mysql_select_db(DB_NAME);
+$MYSQLI_LINK = mysqli_connect(DB_HOST, DB_USER, DB_PASS);
+mysqli_select_db($MYSQLI_LINK, DB_NAME);

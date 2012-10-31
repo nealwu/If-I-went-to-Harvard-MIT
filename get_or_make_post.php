@@ -1,23 +1,19 @@
 <?php
 require_once('mysql.php');
 
-$body = mysqli_real_escape_string($_REQUEST['newpost']);
+$body = mysqli_real_escape_string($MYSQLI_LINK, $_REQUEST['newpost']);
 $time = time();
 
-print "body is " . $body;
-print "<br />";
-
 if (!empty($body)) {
-    $query = "INSERT INTO posts VALUES ('', $time, '$body')";
-    print $query . "\n\n";
-    $result = mysql_query($query) or die("SELECT Error: " . mysql_error());
+    $query = "INSERT INTO posts VALUES ('', $time, '$body', '')";
+    $result = mysqli_query($MYSQLI_LINK, $query) or die("SELECT Error: " . mysqli_error($MYSQLI_LINK));
 }
 
 $query = "SELECT * FROM posts ORDER BY time DESC";
-$result = mysql_query($query) or die("SELECT Error: " . mysql_error());
+$result = mysqli_query($MYSQLI_LINK, $query) or die("SELECT Error: " . mysqli_error($MYSQLI_LINK));
 
 $rows = array();
-while ($r = mysql_fetch_assoc($result)) {
+while ($r = mysqli_fetch_assoc($MYSQLI_LINK, $result)) {
     $rows []= $r;
 }
 print json_encode($rows);
