@@ -19,9 +19,9 @@
         
         <textarea class="span11" placeholder="Enter your own dreams here!" id="newpost"></textarea>
           <input class="btn" type="submit"></input>
-		</div>
+        </div>
       </form>
-
+      
       <div id="currentposts">
       </div>
     </div>
