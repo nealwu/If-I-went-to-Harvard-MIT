@@ -1,7 +1,7 @@
 <?php
 require_once('mysql.php');
 
-$body = mysqli_real_escape_string($MYSQLI_LINK, $_REQUEST['newpost']);
+$body = mysqli_real_escape_string($MYSQLI_LINK, htmlspecialchars($_REQUEST['newpost']));
 $time = time();
 
 if (!empty($body)) {

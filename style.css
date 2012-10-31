@@ -1,0 +1,22 @@
+body {
+    background: #661B21;
+}
+
+div.container {
+    background: white;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 14px;   
+}
+
+div.container h1 {
+    margin-top: 0px;
+}
+
+div.container textarea.span11 {
+    height: 20px;
+}
+
+td.timecol {
+    width: 110px;
+}

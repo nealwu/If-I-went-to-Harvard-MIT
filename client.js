@@ -32,13 +32,13 @@ function displayPosts() {
     if (localStorage.getItem("posts") !== null){
         var jsonData = localStorage.getItem("posts");
         var data = $.parseJSON(jsonData);
-        var table = "<table class='table'> <tr> <th>Post Body</th> <th>User</th> <th>Time</th> </tr>";
+        var table = "<table class='table'>" // <tr> <th>Post Body</th> <th>User</th> <th>Time</th> </tr>";
         
         for (var i = 0; i < data.length; i++) {
             var time = new Date(data[i].time * 1000);
             table += "<tr><td>" + nl2br(data[i].body) +
                 "</td><td><a href='#'>" + data[i].uid +
-                "</a></td><td>" + dateToString(time.getMonth(), time.getDate()) + ", " + timeToString(time.getHours(), time.getMinutes()) +
+                "</a></td><td class='timecol'>" + dateToString(time.getMonth(), time.getDate()) + ", " + timeToString(time.getHours(), time.getMinutes()) +
                 "</td></tr>";
         }
         
