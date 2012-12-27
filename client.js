@@ -40,7 +40,7 @@ function displayPosts() {
                 nl2br(data[i].body) +
                 "</td><td><a href='#'>" + data[i].uid +
                 "</a></td><td class='timecol'>" + dateToString(time.getMonth(), time.getDate()) + ", " + timeToString(time.getHours(), time.getMinutes()) +
-                "</td><td>" + '<div class="fb-like" data-href="http://ifiwentto.tk/' + i + '" data-send="false" data-layout="button_count" data-width="60" data-show-faces="true"></div>' +
+                "</td><td>" + '<div class="fb-like" data-href="http://ifiwentto.tk/' + data[i].pid + '" data-send="false" data-layout="button_count" data-width="60" data-show-faces="true"></div>' +
                 "</td></tr>";
         }
         
