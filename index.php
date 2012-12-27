@@ -5,7 +5,7 @@
     <title>If I Went to Harvard I would...</title>
     
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.1.1/css/bootstrap-combined.min.css" rel="stylesheet">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <link href="style.css" rel="stylesheet">
     <script type="text/javascript" src="client.js"></script>
   </head>
