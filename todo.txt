@@ -1,10 +1,11 @@
 SOON:
 * Do Bootstrap tutorial: http://www.w3resource.com/twitter-bootstrap/tutorial.php
-* Make the entry box expand when you type a long post.
+* Make the entry box expand when you type a long post.git 
 * Make the table nicer. The text is taking up too much of the space.
 * Change the background color. Ugh.
 
 SOONISH:
+* make the add box a search box as well
 * Make the whole user thing work.
 
 LATER:
