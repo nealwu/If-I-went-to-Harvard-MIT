@@ -20,3 +20,10 @@ div.container textarea.span11 {
 td.timecol {
     width: 110px;
 }
+
+tr {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
